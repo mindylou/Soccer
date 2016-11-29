@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     var highScore: Int!
     var highScoreTitleLabel: UILabel!
     var highScoreNumberLabel: UILabel!
+    var highScoreKey: String!
+    var defaults: UserDefaults!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,9 @@ class ViewController: UIViewController {
         gameState = .notYet
         
         view.backgroundColor = .white
+        
+        defaults = UserDefaults.standard
+        highScoreKey = "highScore"
         
         addSubviews()
         
@@ -68,7 +73,7 @@ class ViewController: UIViewController {
         
         view.addSubview(scoreNumberLabel)
         
-        highScore = 0
+        highScore = defaults.integer(forKey: highScoreKey)
         highScoreTitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 40))
         highScoreTitleLabel.center.x = view.frame.maxX - highScoreTitleLabel.frame.width/1.5
         highScoreTitleLabel.center.y = highScoreTitleLabel.frame.height
@@ -149,12 +154,11 @@ class ViewController: UIViewController {
         }
         gameState = .start
         ySpeed = ySpeed * -1
-        if xSpeed > 0 {
-            xSpeed = CGFloat(arc4random_uniform(5))
-        } else {
-            xSpeed = -1 * CGFloat(arc4random_uniform(5))
-        }
-        
+        let xSpeedArray = [-1, 1]
+        let randomIndex = Int(arc4random_uniform(UInt32(xSpeedArray.count)))
+        // random negative or positive x speed
+        xSpeed = CGFloat(Int(arc4random_uniform(5))*xSpeedArray[randomIndex])
+
         self.score = score + 1
         self.scoreNumberLabel.text = String(self.score)
 
@@ -168,6 +172,7 @@ class ViewController: UIViewController {
     func setHighScore() {
         if (score > highScore) {
             highScore = score
+            defaults.set(highScore, forKey: highScoreKey)
             highScoreNumberLabel.text = String(highScore)
         }
     }
