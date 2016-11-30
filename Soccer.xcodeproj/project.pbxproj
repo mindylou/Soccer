@@ -7,19 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0905401DEDFA1D0017C9F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C09053F1DEDFA1D0017C9F3 /* GoogleService-Info.plist */; };
 		0CECDB581DE368030084D1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CECDB571DE368030084D1DB /* AppDelegate.swift */; };
 		0CECDB5A1DE368030084D1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CECDB591DE368030084D1DB /* ViewController.swift */; };
 		0CECDB5F1DE368030084D1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CECDB5E1DE368030084D1DB /* Assets.xcassets */; };
 		0CECDB621DE368030084D1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CECDB601DE368030084D1DB /* LaunchScreen.storyboard */; };
+		2F2248E4DB4F988A520F986C /* Pods_Soccer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EA7D088A310E9802C05CE8 /* Pods_Soccer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C09053F1DEDFA1D0017C9F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C7AB07C1DEE22DF00DC6AC8 /* Soccer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Soccer.entitlements; sourceTree = "<group>"; };
 		0CECDB541DE368030084D1DB /* Soccer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soccer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CECDB571DE368030084D1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CECDB591DE368030084D1DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0CECDB5E1DE368030084D1DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CECDB611DE368030084D1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CECDB631DE368030084D1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37EA7D088A310E9802C05CE8 /* Pods_Soccer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soccer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66DEBA286E6FE10DC234BBE9 /* Pods-Soccer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soccer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Soccer/Pods-Soccer.debug.xcconfig"; sourceTree = "<group>"; };
+		B0E0555E98D7D8BEE4A2D422 /* Pods-Soccer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soccer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soccer/Pods-Soccer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2248E4DB4F988A520F986C /* Pods_Soccer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +46,8 @@
 			children = (
 				0CECDB561DE368030084D1DB /* Soccer */,
 				0CECDB551DE368030084D1DB /* Products */,
+				1C1BE733BEED747558E389C3 /* Pods */,
+				B2154357BD9B5F2C40DE2D32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +62,32 @@
 		0CECDB561DE368030084D1DB /* Soccer */ = {
 			isa = PBXGroup;
 			children = (
+				0C7AB07C1DEE22DF00DC6AC8 /* Soccer.entitlements */,
 				0CECDB571DE368030084D1DB /* AppDelegate.swift */,
 				0CECDB591DE368030084D1DB /* ViewController.swift */,
 				0CECDB5E1DE368030084D1DB /* Assets.xcassets */,
 				0CECDB601DE368030084D1DB /* LaunchScreen.storyboard */,
 				0CECDB631DE368030084D1DB /* Info.plist */,
+				0C09053F1DEDFA1D0017C9F3 /* GoogleService-Info.plist */,
 			);
 			path = Soccer;
+			sourceTree = "<group>";
+		};
+		1C1BE733BEED747558E389C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66DEBA286E6FE10DC234BBE9 /* Pods-Soccer.debug.xcconfig */,
+				B0E0555E98D7D8BEE4A2D422 /* Pods-Soccer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B2154357BD9B5F2C40DE2D32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37EA7D088A310E9802C05CE8 /* Pods_Soccer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CECDB661DE368030084D1DB /* Build configuration list for PBXNativeTarget "Soccer" */;
 			buildPhases = (
+				F5CAFD74EBB95B98404F5FD4 /* [CP] Check Pods Manifest.lock */,
 				0CECDB501DE368030084D1DB /* Sources */,
 				0CECDB511DE368030084D1DB /* Frameworks */,
 				0CECDB521DE368030084D1DB /* Resources */,
+				686D5F6A94261B3F3DC3EF1D /* [CP] Embed Pods Frameworks */,
+				A42EFA8015B82F6C8818AF13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -88,12 +120,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Mindy Lou";
 				TargetAttributes = {
 					0CECDB531DE368030084D1DB = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = SBN549646H;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,10 +160,59 @@
 			files = (
 				0CECDB621DE368030084D1DB /* LaunchScreen.storyboard in Resources */,
 				0CECDB5F1DE368030084D1DB /* Assets.xcassets in Resources */,
+				0C0905401DEDFA1D0017C9F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		686D5F6A94261B3F3DC3EF1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Soccer/Pods-Soccer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A42EFA8015B82F6C8818AF13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Soccer/Pods-Soccer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5CAFD74EBB95B98404F5FD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0CECDB501DE368030084D1DB /* Sources */ = {
@@ -169,6 +256,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -218,6 +306,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -244,8 +333,11 @@
 		};
 		0CECDB671DE368030084D1DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66DEBA286E6FE10DC234BBE9 /* Pods-Soccer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Soccer/Soccer.entitlements;
+				DEVELOPMENT_TEAM = SBN549646H;
 				INFOPLIST_FILE = Soccer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mindylou.Soccer;
@@ -256,8 +348,11 @@
 		};
 		0CECDB681DE368030084D1DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0E0555E98D7D8BEE4A2D422 /* Pods-Soccer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Soccer/Soccer.entitlements;
+				DEVELOPMENT_TEAM = SBN549646H;
 				INFOPLIST_FILE = Soccer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mindylou.Soccer;
@@ -285,6 +380,7 @@
 				0CECDB681DE368030084D1DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

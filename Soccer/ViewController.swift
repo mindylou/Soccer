@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import FirebaseDatabase
 
 enum state {
     case notYet
@@ -25,11 +26,13 @@ class ViewController: UIViewController {
     var score: Int!
     var scoreTitleLabel: UILabel!
     var scoreNumberLabel: UILabel!
+    var usernameField: UITextField!
     var highScore: Int!
     var highScoreTitleLabel: UILabel!
     var highScoreNumberLabel: UILabel!
     var highScoreKey: String!
     var defaults: UserDefaults!
+    var firebaseRef: FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +42,18 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         
         defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "highScore")
+
         highScoreKey = "highScore"
         
         addSubviews()
         
+        firebaseRef = FIRDatabase.database().reference(withPath: "players")
+        
+        firebaseRef.observe(.value, with: { snapshot in
+            print(snapshot.value ?? "nothing")
+        })
+                
     }
     
     func addSubviews() {
@@ -53,6 +64,16 @@ class ViewController: UIViewController {
         ySpeed = 25
         
         score = 0
+        
+        usernameField = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        usernameField.center.x = view.center.x
+        usernameField.center.y = usernameField.frame.height * 3
+        usernameField.textAlignment = .center
+        usernameField.text = "Mindy"
+        usernameField.font = UIFont(name: "Helvetica Neue", size: 20)
+        usernameField.clearsOnBeginEditing = true
+        view.addSubview(usernameField)
+        
         scoreTitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
         scoreTitleLabel.center.x = view.center.x
         scoreTitleLabel.center.y = scoreTitleLabel.frame.height * 4
@@ -172,8 +193,17 @@ class ViewController: UIViewController {
     func setHighScore() {
         if (score > highScore) {
             highScore = score
-            defaults.set(highScore, forKey: highScoreKey)
+//            defaults.set(highScore, forKey: highScoreKey)
             highScoreNumberLabel.text = String(highScore)
+            self.writeToDatabase()
+        }
+    }
+    
+    func writeToDatabase() {
+        if let name = usernameField.text {
+            let playerRef = firebaseRef.child(name.lowercased())
+            let player: NSDictionary = ["high-score": highScore]
+            playerRef.setValue(player)
         }
     }
     
