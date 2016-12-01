@@ -1,5 +1,5 @@
 # Soccer
-## Final project for Intro to iOS Application Development (CUAppDev Training Course)
+### Final project for Intro to iOS Application Development (CUAppDev Training Course)
 
 Soccer mimics the minigame of the same name on Facebook Messenger. Tap the ball to keep it in the air: the longer you tap, the more points you score!
 
