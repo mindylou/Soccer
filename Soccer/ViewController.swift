@@ -60,9 +60,9 @@ class ViewController: UIViewController {
         
         addSubviews()
         
-//        firebaseRef.observe(.value, with: { snapshot in
+//        firebaseReff.observe(.value, with: { snapshot in
 //            print(snapshot.value ?? "nothing")
-//        })
+//        })v
         
     }
     
@@ -85,6 +85,7 @@ class ViewController: UIViewController {
         usernameField.font = UIFont(name: "Helvetica Neue", size: 20)
         usernameField.textColor = self.view.tintColor
         usernameField.clearsOnBeginEditing = true
+        
         view.addSubview(usernameField)
         
         scoreTitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
@@ -172,6 +173,10 @@ class ViewController: UIViewController {
         
         view.addSubview(ball)
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.usernameField.resignFirstResponder()
     }
 
     func update() {
